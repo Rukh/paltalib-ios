@@ -52,8 +52,11 @@ let dependencies: [Package.Dependency] = [
 let targets: [Target] = [
     .target(
         name: "PaltaLibCore",
-        dependencies: [],
         path: "Sources/Core"
+    ),
+    .target(
+        name: "PaltaLibAnalyticsModel",
+        path: "Sources/AnalyticsModel"
     ),
     .target(
         name: "PaltaLibAttribution",
@@ -75,7 +78,8 @@ let targets: [Target] = [
         name: "PaltaLibAnalytics",
         dependencies: [
             "Amplitude",
-            "PaltaLibCore"
+            "PaltaLibCore",
+            "PaltaLibAnalyticsModel",
         ],
         path: "Sources/Analytics"
     ),

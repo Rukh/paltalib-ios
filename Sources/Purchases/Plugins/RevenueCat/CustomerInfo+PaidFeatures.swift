@@ -55,7 +55,7 @@ private extension Store {
             return .appStore
         case .playStore, .amazon:
             return .googlePlay
-        case .stripe, .promotional, .unknownStore:
+        case .stripe, .promotional, .unknownStore, .rcBilling, .external:
             return .web
         }
     }
